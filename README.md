@@ -2,7 +2,6 @@
 
 ### Built With:
 
-- Node.js
 - Phonegap
 
 
