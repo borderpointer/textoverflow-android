@@ -1,0 +1,26 @@
+{
+  "name": "textoverflow",
+  "version": "1.0.0",
+  "description": "annoy your constant-phone-using fwends",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borderpointer/textoverflow.git"
+  },
+  "author": "borderpointer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/borderpointer/textoverflow/issues"
+  },
+  "homepage": "https://github.com/borderpointer/textoverflow#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "request": "^2.67.0",
+    "sweetalert": "^1.1.3",
+    "twilio": "^2.7.0"
+  }
+}
