@@ -1,4 +1,4 @@
-# textoverflow
+# textoverflow - android
 
 ### Built With:
 
@@ -8,21 +8,7 @@
 
 ### Dependencies:
 
-- Body-Parser
-- Express
-- Request
-- Twilio
-
-### Third Party Libraries:
-
-- jQuery
-- jQUery Mobile
-- Google Fonts
-- Sweetalert
-
-### Third Party API's:
-
-- Pixabay
+- Cordova
 
 
 ### Synopsis
@@ -37,4 +23,4 @@ I wanted to make my friends get off their phones at dinner and actually interact
 
 ### Installation
 
-Beta available: [here](http://textoverflow.herokuapp.com/)
+View the web app [here](https://github.com/borderpointer/textoverflow)
