@@ -23,4 +23,4 @@ I wanted to make my friends get off their phones at dinner and actually interact
 
 ### Installation
 
-View the web app [here](https://github.com/borderpointer/textoverflow)
+View the web app [here](https://github.com/borderpointer/textoverflow) or alternatively download the android app [here](https://build.phonegap.com/apps/1821839/install)
