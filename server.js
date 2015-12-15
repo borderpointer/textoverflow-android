@@ -14,6 +14,11 @@ var app          = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('www'));
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 // LISTENER
 
@@ -25,54 +30,52 @@ var pixabayKey   = process.env.PIXABAY_API_KEY;
 
 // ROUTES
 
-app.route('/pixabay/:image_search_words')
+// Route for making a request to Pixabay's API
+app.get('/pixabay/:image_search_words', function(req, res, next) {
 
-    .get(function(req, res) {
+  request('https://pixabay.com/api/?key=' + pixabayKey + "&q=" + req.params.image_search_words + "&image_type=photo&pretty=true", function (error, response, body) {
 
-        request('https://pixabay.com/api/?key=' + pixabayKey + "&q=" + req.params.image_search_words + "&image_type=photo&pretty=true", function (error, response, body) {
+        if (!error && response.statusCode == 200) {
 
-              if (!error && response.statusCode == 200) {
+            res.send(body);
 
-                res.send(body);
-
-              }
-
-        });
+        }
 
     });
 
+});
 
 // Route for making a request to Twilio's API
-app.route('/twilio')
+app.post('/twilio', function(req, res, next) {
 
-    .post(function(req, res) {
+    var client = new twilio.RestClient(process.env.ACCOUNT_SID, process.env.AUTH_TOKEN);
 
-        var client = new twilio.RestClient(process.env.ACCOUNT_SID, process.env.AUTH_TOKEN);
+    // console.log(req.body);
 
-        // console.log(req.body);
+    // Send an SMS text message
+    client.sendMessage({
 
-        // Send an SMS text message
-        client.sendMessage({
+        to: '+1' + req.body.num,
+        from: '+19177468848',
+        body: 'Gett uff ur fone',
+        mediaUrl: req.body.image_url
 
-            to: '+1' + req.body.num,
-            from: '+19177468848',
-            body: 'Gett uff ur fone',
-            mediaUrl: req.body.image_url
+    }, function(err, responseData) { //this function is executed when a response is received from Twilio
 
-        }, function(err, responseData) { //this function is executed when a response is received from Twilio
+        if (!err) {
 
-            if (!err) {
+            console.log("from: ", responseData.from);
+            console.log("to: ", responseData.to);
+            console.log("message: ", responseData.body);
+            console.log("image url: ", responseData.mediaUrl);
 
-                console.log("from: ", responseData.from);
-                console.log("to: ", responseData.to);
-                console.log("message: ", responseData.body);
-                console.log("image url: ", responseData.mediaUrl);
+        }
 
-            }
-
-            res.send(responseData);
-
-        });
+        res.send(responseData);
 
     });
+
+});
+
+
 
