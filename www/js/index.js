@@ -71,8 +71,7 @@ $submitRequest.click(function() {
 
         for (var i = 0; i < parsedData["hits"].length; i++) {
 
-        // sendText(parsedData["hits"], $phoneNumberInput, i);
-        console.log(i);
+        sendText(parsedData["hits"], $phoneNumberInput, i);
 
         }
 
@@ -82,23 +81,23 @@ $submitRequest.click(function() {
 
 });
 
-// function sendText(imageDataArray, num, count) {
+function sendText(imageDataArray, num, count) {
 
-//     $.ajax({
+    $.ajax({
 
-//         url:'/twilio',
-//         data: {
-//             num : num,
-//             image_url : imageDataArray[count]['webformatURL']
-//         },
-//         method: 'POST'
-//         }).done(function(data) {
+        url:'/twilio',
+        data: {
+            num : num,
+            image_url : imageDataArray[count]['webformatURL']
+        },
+        method: 'POST'
+        }).done(function(data) {
 
-//             console.log(data);
+            console.log(data);
 
-//         });
+        });
 
-// }
+}
 
 function alertSuccess () {
 
