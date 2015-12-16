@@ -1,5 +1,6 @@
 # textoverflow - android
 
+
 ### Built With:
 
 - Phonegap
@@ -26,7 +27,6 @@ I wanted to make my friends get off their phones at dinner and actually interact
 ![textoverflow-compiled-2](/screenshots/textoverflow-compiled-2.png)
 
 
-
 ### Installation
 
-View the web app [here](https://github.com/borderpointer/textoverflow) or alternatively download the android app [here](https://build.phonegap.com/apps/1821839/share)
+View the web app repo [here](https://github.com/borderpointer/textoverflow) or alternatively download the android app [here](https://build.phonegap.com/apps/1821839/share)
