@@ -17,7 +17,7 @@ Are you friends constantly on their phones at dinner? Use this app to get them o
 
 ### Motivation
 
-I wanted to make my friends get off their phones at dinner and actually interact physically.
+I wanted to make my friends get off their phones at dinner and actually interact in person.
 
 
 ### Screenshots
