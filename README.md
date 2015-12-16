@@ -22,10 +22,9 @@ I wanted to make my friends get off their phones at dinner and actually interact
 
 ### Screenshots
 
-![textoverflow-1](/screenshots/textoverflow-1.png)
-![textoverflow-2](/screenshots/textoverflow-2.png)
-![textoverflow-3](/screenshots/textoverflow-3.png)
-![textoverflow-4](/screenshots/textoverflow-4.png)
+![textoverflow-compiled-1](/screenshots/textoverflow-compiled-1.png)
+![textoverflow-compiled-2](/screenshots/textoverflow-compiled-2.png)
+
 
 
 ### Installation
